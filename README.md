@@ -1,4 +1,3 @@
-<img src="https://user-images.githubusercontent.com/Carma77/Challenge-alura-GP7/main/image/imagen1.PNG" alt="imagen1.PNG" style="max-width: 100%;">
 
 # Encriptador de Texto | 1er Challenge ONE - Oracle Next Education
 
