@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Encriptador de Texto Challenge Aulara Oracle Next Education">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Days+One&family=Poppins:wght@500;600;900&display=swap" rel="stylesheet"><!--Fuentes  de google-->
+    <script src="https://kit.fontawesome.com/0cf3687c78.js" crossorigin="anonymous"></script><!--link de los icnos en linea-->
+    <link rel="shortcut icon" href="image/iconoPestania.ico" type="image/x-icon"><!--link del icono de la pestana-->
+    <title>Encriptador de Texto Oracle Alura</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="css/style.css">  
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+
+<body>
+    
+
+    <div class="contenedorPadre">
+
+        <div class="contenedorCentral">
+
+            <div class="contenedorIzquierdo">
+
+                <div class="logo">
+                    <p class="logo"><span style="--item:1"><img src="image/Logo.png" alt="" ></span></p>
+                </div>
+
+                <div class="entradaTexto">
+                    <textarea name="textAreaIzq" class="textAreaIzq" id="textAreaIzq" cols="30" rows="13" placeholder="Ingrese el texto aquí"></textarea>
+                </div>
+
+                <div class="advertencias">
+                    <p class="advertencia"><i class="fa-solid fa-circle-exclamation"></i> Solo letras minúsculas y sin acentos </p>
+                </div>
+                
+                <div class="contenedorBotonesIzquierdo">
+                    <input type="button" value="Encriptar" class="boton encriptar" onclick="encriptar()">
+                    <input type="button" value="Desencriptar" class="boton desencriptar" onclick="desencriptar()">
+                </div>
+    
+            </div>
+    
+            <div class="contenedorDerecho">
+    
+                <div id="salidaDetexto" class="salidaDetexto">
+                    <textarea name="" id="textAreaDer" class="textAreaDer" cols="30" rows="7"></textarea>
+                </div>
+
+                <div id="contenedorBotonesDerecho" class="contenedorBotonesDerecho">
+                    <input type="button" value="Copiar texto" class="boton copiar" onclick="copy()">
+                </div>
+
+                <!--Contenedor visible solo cuando no hay texto encriptado-->
+                <div id="sinMensaje" class="sinMensaje">
+                    <img src="image/dibujo2.png" alt="" class="dibujo">
+                    <p class="textoSinMensaje1">Ningún mensaje<br>fue encontrado</p>
+                    <p class="textoSinMensaje2">Por favor Ingresa el texto que desees encriptar o desencriptar.</p>
+                    
+                </div>
+
+            </div>
+    
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <div class="footerMain">
+
+            <div class="designed">
+                <p>Designed by <span class="nameDesigned">CARLOS LOPEZ - 2024 para Alura Latam</span> </p>
+            </div>
+    
+            <div class="redes">
+                <a href="https://github.com/Carma77"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/carlos-mario-lopez-rondon77"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/carlosmlopezr"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+
+        </div>
+
+    </footer>
+   
+    <script src="scripts/script.js"></script>
+  
+</body>
+
+
+</html>

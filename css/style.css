@@ -1,0 +1,382 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;     /*para que las cajas no se desborden unas con otras*/
+}
+
+
+/*MODOFICACIONES AL SCROLL BAR ORIGINAL */
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Toda la linea */
+  ::-webkit-scrollbar-track {
+    background: #00000000;
+  }
+   
+  /* indicador */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.250); 
+    border-radius: 10px;
+  }
+  
+  /* indicador hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(67, 93, 114, 0.574); 
+  }
+/*MODOFICACIONES AL SCROLL BAR ORIGINAL */
+
+
+body{
+    background-image: linear-gradient(to right bottom, #1A5319, #508D4E, #80AF81, #D6EFD8);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+.contenedorPadre{
+    display: flex;
+    justify-content: center;/**/
+    margin-top: 5vh;/**/
+
+    /*background-color: gray;/**/
+}
+
+
+    .contenedorCentral{
+        display: flex;/*Este es un flex padre por asi decirlo entonces tambien debe llevar el display:flex
+        porque quiero hacer todos los elementos que estan contenidos aqui(en header) responsive*/
+            
+        /*flex-direction: column;/*este hace lo mismo que el de abajo(no se porque use el de abajo y no este)*/
+        /*flex-wrap: nowrap;/*El nowrap(no me respeta los anchos de los elementos, los encoje todos para dejarlos en una misma fila)  ES PARA QUE SE ADAPTE SEGUN EL TAMANIO ESTABLECIDO*/
+        flex-flow: row nowrap;/*ESte flex-flow abarca tanto "flex-drirection" como "flex-wrap" es como una fusion de los dos, por eso se uso este, pero puedo usar los otros dos en vez de este sin problema*/
+    
+        width: 1000px;
+        margin: 0 10px 20px 10px;/**/
+        
+    
+    }
+
+
+        .contenedorIzquierdo{
+            flex: 10 1 auto;
+
+            background-color: rgba(0, 0, 0, 0.215);
+            border-radius: 10px;
+
+            display: flex;
+            flex-flow: column nowrap;
+            margin-right: 20px;/**/
+        }
+
+            .logo{
+                height: 15%;
+            }
+
+                /*Animacion logo*/
+                .logo span{
+                    display: inline-block;
+                    animation: logo-anim 2s infinite;
+                    animation-delay: calc(0.1s * var(--item));
+                    animation-duration: 5s;
+                    
+                }
+    
+                @keyframes logo-anim {
+                    0%,
+                    80%,
+                    
+                    50% {
+                        transform:rotate(360deg);
+                    }
+    
+                    55% {  
+                        transform:rotate(90deg);
+                    }
+    
+                }
+                /*Animacion logo*/
+
+            img{
+                padding-top: 10px;
+                /*background-color: blue;/**/
+            }
+
+            .entradaTexto{
+                height: 65%;
+
+                padding-left: 10%;
+
+                display: flex;
+                flex-flow: column nowrap;/*ESte flex-flow abarca tanto "flex-drirection" como "flex-wrap" es como una fusion de los dos, por eso se uso este, pero puedo usar los otros dos en vez de este sin problema*/
+                justify-content: center;
+                align-items: center;
+               
+            }
+            
+                .textAreaIzq{
+                    width: 90%;
+                    height: 80%;
+                    font-size: 1.6rem;
+                    font-family: 'Montserrat', sans-serif;
+                    border-style: none;
+                    resize: none;/**/
+                    outline: none;
+                    background-color: transparent;
+                    color: rgba(255, 255, 255, 0.741);
+                    
+                }
+
+                .textAreaIzq::placeholder {
+                   color: rgba(255, 255, 255, 0.7);/**/
+                }
+
+            .advertencias{
+                height: 5%;/**/
+            }
+                
+                .advertencia{
+                    padding-left: 14%;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 0.8rem;
+                    color: rgba(255, 255, 255, 0.63);
+                }
+            
+            .contenedorBotonesIzquierdo{
+                height: 15%;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-items: center;  
+            }
+
+                .boton{
+                    width: 35%;
+                    font-size: 1rem;
+                    font-family: 'Montserrat', sans-serif;/**/
+                    letter-spacing: 2px;
+                    padding: 6px;
+                    height: 35px;
+                    color: rgba(255, 255, 255, 0.696);
+                    border: none;
+                    border-radius: 12px;
+                    cursor: pointer;
+                }
+
+
+                    .boton:hover {
+                        transform: scale(1.04);/**/
+                        box-shadow: 1px 1px 8px #00000069;
+                        transition: 0.5s transform;
+                    }
+                    
+                    .boton:active {
+                        background: #dadada43;
+                    }
+
+                    .encriptar{
+                        background-color: #992f6b;
+                        margin-right: 20px;
+                    }
+
+                    .desencriptar{
+                        background-color: #3A1078;
+                    
+                    }
+
+
+
+        .contenedorDerecho{
+            flex: 1 1 auto;
+
+            background-color: rgba(0, 0, 0, 0.215);
+            border-radius: 10px;
+         
+            display: flex;
+            flex-flow: column nowrap;/*ESte flex-flow abarca tanto "flex-drirection" como "flex-wrap" es como una fusion de los dos, por eso se uso este, pero puedo usar los otros dos en vez de este sin problema*/
+        }
+
+
+            .salidaDetexto{
+                height: 85%;
+
+                display: flex;
+                flex-flow: column nowrap;/*ESte flex-flow abarca tanto "flex-drirection" como "flex-wrap" es como una fusion de los dos, por eso se uso este, pero puedo usar los otros dos en vez de este sin problema*/
+                justify-content: center;
+                align-items: center;
+
+                display: none;/**/
+            }
+
+            .textAreaDer{
+               
+                width: 90%;
+                height: 90%;
+
+                padding: 10px 10px 10px 10px;
+                
+               
+                border-style: none;
+                resize: none;
+                outline: none;
+                text-align: center;
+                /*font-size: 1.6rem;/**/
+                font-size: 14px;
+                font-family: 'Montserrat', sans-serif;
+                background-color: transparent;
+                color: rgba(255, 255, 255, 0.741);
+              
+            }
+
+            .contenedorBotonesDerecho{
+                height: 15%;
+
+                display: flex;/**/
+                flex-flow: row nowrap;/*ESte flex-flow abarca tanto "flex-drirection" como "flex-wrap" es como una fusion de los dos, por eso se uso este, pero puedo usar los otros dos en vez de este sin problema*/
+                /*justify-content: space-around;/**/
+                justify-content: center;
+                align-items: center;/**/
+                display: none;/**/
+            }
+
+                .copiar{
+                    width: 80%;
+                    background-color: #7A1CAC;
+                }
+        
+  
+
+            /*Contenido visible cuando no hay texto encriptado*/
+            
+            .sinMensaje{
+                width: 100%;
+                height: 100%;
+                font-family: 'Montserrat', sans-serif;
+
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;/**/
+                align-items: center;/**/
+                text-align: center;/**/
+    
+                /*display: none;/**/
+            }
+
+                .dibujo{
+                    width: 255px;/**/
+                    opacity: 0.5;
+                }
+
+
+                .textoSinMensaje1{
+                    margin-top: 40px;
+                    color: rgba(255, 255, 255, 0.74);
+                    font-size: 1.5rem;
+                   /* display: none;/**/
+                }
+
+                .textoSinMensaje2{
+                    margin-top:15px;
+                    color: rgba(255, 255, 255, 0.708);
+                    font-size: 10px;
+                    /*display: none;/**/  
+                }
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5vh;
+}
+
+    .footerMain{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.215);
+        border-radius: 15px;
+        padding: 10px 50px;/**/
+        width: 1000px;
+        margin: 0px 10px;
+    }
+            
+    .designed{
+        font-family: 'Montserrat', sans-serif;
+        color: rgba(255, 255, 255, 0.782);
+        font-style: italic;
+        text-align: center;     
+    }
+
+         .nameDesigned{
+            color: rgb(255, 255, 255);
+            font-style: Helvetica;
+            font-family: 'Anton', sans-serif;
+            letter-spacing: 0.01PX;           
+        }
+        
+            
+            
+    .redes{
+        margin-top: 15px;
+        text-align: center; 
+        font-family: 'Montserrat', sans-serif;
+    }
+            
+        .redes a{
+            color: white;
+            padding: 0 5px;
+            font-size: 25px;
+            text-decoration: none;
+        }
+            
+                        
+            
+                   
+
+/*Media query*/
+/*Si quisiera que mi pagina se vea exactamente igual en el movil que en la version web
+quito estos media query y en el index quito el
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+*/
+
+@media all and (max-width:750px){
+
+    .contenedorCentral{
+        flex-flow: column nowrap;
+    }
+
+    .contenedorIzquierdo{
+        margin: 0 0 20px 0;
+    }
+
+    .contenedorDerecho{
+        padding-bottom: 25px;
+    }
+
+    .dibujo{
+        display: none;
+    }
+}
+
+@media all and (max-width:450px){
+
+    .contenedorBotonesIzquierdo{
+        flex-flow: column nowrap;
+        margin: 10px 0px 25px 0px;
+    }
+
+    .boton{
+        width: 80%;
+    }
+
+    .encriptar{
+        margin: 0px 0px 15px 0px ;
+    }
+
+    .entradaTexto{
+        padding-left: 0;
+    }
+}
