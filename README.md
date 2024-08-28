@@ -1,4 +1,4 @@
-![disenio](imagen proyecto//)
+[![disenio](imagen proyecto//)](https://github.com/Carma77/Challenge-alura-GP7/blob/main/image/imagen1.PNG)
 
 # Encriptador de Texto | 1er Challenge ONE - Oracle Next Education
 
