@@ -44,5 +44,5 @@ Las "llaves" o requisitos de la encriptación que se utilizaron son las siguient
 
 ---
 
-[**Ir a la página** 🤘](link github)
+[**Ir a la página** 🤘] https://github.com/Carma77/Challenge-alura-GP7
 ---
